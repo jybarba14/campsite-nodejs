@@ -36,7 +36,8 @@ partnerRouter.route('/:partnerId')
     })
     .put((req, res, next) => {
         res.write(`Update the partner: ${req.params.partnerId}\n`);
-        res.end(`Will update the partner: ${req.body.name} with description: ${req.body.description}`);
+        res.end(`Will update the partner: ${req.body.name} with description: ${req.body.description}\n
+            and color: ${req.body.color}`);
     })
     .delete((req, res, next) => {
         res.end(`Deleting partner: ${req.params.partnerId}`)
